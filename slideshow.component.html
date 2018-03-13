@@ -1,5 +1,5 @@
 <h2>{{$ctrl.slideTitle}}</h2>
-
+<div ng-transclude></div>
 <button ng-click="$ctrl.onPrev()"><</button>
 <img 
     width="100" 
@@ -9,3 +9,5 @@
 
 <button ng-click="$ctrl.onNext()">></button>
 <h3>{{$ctrl.list[$ctrl.currentIndex].title}}</h3>
+
+

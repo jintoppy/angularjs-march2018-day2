@@ -5,30 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .highlight{
+            background-color: yellow;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
 </head>
 <body>
     
+    
+
 
     <div ng-controller="MyCtrl">
-        
+            {{myval}}
+            <input type="text" ng-model="myval">
+
+            <div app-highlight>
+                Hello
+            </div>
+
+            <div app-highlight>
+                Hi
+            </div>
+            
+
         <my-slide-show 
             slide-title="Cat slideshow"
             list="catData"
-        ></my-slide-show>
+            on-complete="onCatSlideShowFinished(index)"
+        >
+        <h1>Hello</h1>
+        <p>Another</p>
+        <div>ASnother div</div>
+    </my-slide-show>
 
 
         <my-slide-show 
             slide-title="Dog slideshow"
+            on-complete="onDogSlideCompleted(index)"
             list="dogList"
-        ></my-slide-show>
+        >
+        <h1>Hi Dogs</h1>
+    </my-slide-show>
 
 
 
     </div>
-
+    <my-color content="trial" color="blue"></my-color>
     <script src="angular.js"></script>
     <script src="app.js"></script>
     <script src="first.component.js"></script>
     <script src="slideshow.component.js"></script>
+    <script src="color.component.js"></script>
+    <script src="app.directive.js"></script>
 </body>
 </html>

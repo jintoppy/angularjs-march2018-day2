@@ -1,6 +1,14 @@
 var myapp = angular.module('myapp',[]);
 
 myapp.controller('MyCtrl', ['$scope', function($scope){
+
+    $scope.onCatSlideShowFinished = function(index){
+        alert('cat slideshow finished ' + index);
+    };
+
+    $scope.onDogSlideCompleted = function(index){
+        alert('dog slideshow completed ' + index);
+    };
     
     $scope.dogList = [
         {

@@ -12,15 +12,22 @@ function($element){
 
     this.onNext = function(){
         this.currentIndex = this.currentIndex + 1;
+        if(this.currentIndex === this.list.length - 1){
+            this.onComplete({
+                index: this.currentIndex
+            });
+        }
     }; 
 
 }]);
 
 myapp.component('mySlideShow', {
     templateUrl: 'slideshow.component.html',
+    transclude: true,
     bindings: {
         slideTitle: '@',
-        list: '<'
+        list: '<',
+        onComplete: '&'
     },
     controller: 'MySlideShowCtrl'
 });
