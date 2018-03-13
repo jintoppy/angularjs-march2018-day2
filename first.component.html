@@ -1,0 +1,15 @@
+<h2>Profile</h2>
+<h3>My title is {{$ctrl.myTitle}}</h3>
+Greeting is {{$ctrl.greeting}}
+<h3>Name: {{$ctrl.user.name}}</h3>
+
+<button ng-click="$ctrl.toggleDetailView()">
+    {{ $ctrl.showDetail ? 'Hide Detail': 'Show Detail' }} 
+</button>
+
+<div ng-show="$ctrl.showDetail">
+    <p>Email: {{$ctrl.user.email}}</p>
+    <p>Age: {{$ctrl.user.age}}</p>
+</div>
+
+

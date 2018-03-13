@@ -7,14 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <my-profile></my-profile>
+    
 
     <div ng-controller="MyCtrl">
-        {{myname}}
+        
+        <my-slide-show 
+            slide-title="Cat slideshow"
+            list="catData"
+        ></my-slide-show>
+
+
+        <my-slide-show 
+            slide-title="Dog slideshow"
+            list="dogList"
+        ></my-slide-show>
+
+
+
     </div>
 
     <script src="angular.js"></script>
     <script src="app.js"></script>
     <script src="first.component.js"></script>
+    <script src="slideshow.component.js"></script>
 </body>
 </html>

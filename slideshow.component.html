@@ -1,0 +1,11 @@
+<h2>{{$ctrl.slideTitle}}</h2>
+
+<button ng-click="$ctrl.onPrev()"><</button>
+<img 
+    width="100" 
+    height="100" 
+    ng-src="{{$ctrl.list[$ctrl.currentIndex].url}}" 
+    alt="">
+
+<button ng-click="$ctrl.onNext()">></button>
+<h3>{{$ctrl.list[$ctrl.currentIndex].title}}</h3>
